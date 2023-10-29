@@ -1,14 +1,18 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SouthernCrossAssessment.Helper;
 
 namespace SouthernCrossAssessment.PageObjects
 {
     public class RegistrationPage
     {
         private IWebDriver driver;
+        UtilityHelper utilities;
 
         public RegistrationPage(IWebDriver driver)
         {
             this.driver = driver;
+            utilities = new UtilityHelper(driver);
         }
 
         By UsernameField = By.Id("username");
@@ -18,7 +22,7 @@ namespace SouthernCrossAssessment.PageObjects
         By ConfirmPasswordField = By.Id("confirmPassword");
         By SubmitButton = By.CssSelector(".btn-default[type=submit]");
         By SuccessfulMessage = By.CssSelector(".alert-success");
-
+        By ValidationErrorMessage = By.CssSelector(".result.alert-danger");
 
         public void EnterUsername(string username)
         {
@@ -49,11 +53,34 @@ namespace SouthernCrossAssessment.PageObjects
         {
             try
             {
+                utilities.WaitForElement(SuccessfulMessage);
                 return driver.FindElement(SuccessfulMessage).Displayed;
             }
-            catch
-            {
+            catch {
                 return false;
+            }
+        }
+
+        public bool VerifyInvalidRegistrationErrorIsDisplayed()
+        {
+            try
+            {
+                utilities.WaitForElement(ValidationErrorMessage);
+                return driver.FindElement(ValidationErrorMessage).Displayed;
+            }
+            catch{
+                return false;
+            }
+        }
+        public string? ReturnInvalidRegistrationErrorMessage()
+        {
+            try
+            {
+                utilities.WaitForElement(ValidationErrorMessage);
+                return driver.FindElement(ValidationErrorMessage).Text.ToString();
+            }
+            catch{
+                return null;
             }
         }
     }
