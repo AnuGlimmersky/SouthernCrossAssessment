@@ -95,8 +95,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("that I am in the Buggy Cars registration page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("I have filled username as \'JohnDoe1\', First name as \'John\' and Last name as \'Doe\'" +
-                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I have filled username as \'JohnDoe\', First name as \'John\' and Last name as \'Doe\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
  testRunner.And("I enter password and confirm password as \'testUserPw1.\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -286,30 +285,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 46
  testRunner.Then("I should see a password validation error for incorrect length", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("API")]
-        public void API()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("API", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 49
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 50
- testRunner.Given("execute API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }
             this.ScenarioCleanup();
