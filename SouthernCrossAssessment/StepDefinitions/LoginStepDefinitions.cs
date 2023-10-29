@@ -54,36 +54,35 @@ namespace SouthernCrossAssessment.StepDefinitions
         public void ThenIShouldSeeAPasswordValidationErrorForMissingUppercase()
         {
             Assert.AreEqual(true, registrationPage.VerifyInvalidRegistrationErrorIsDisplayed());
-            Assert.AreEqual(ErrorMessages.InvalidPasswordMissingUpperCase, registrationPage.ReturnInvalidRegistrationErrorMessage());
+            Assert.AreEqual(Resources.InvalidPasswordMissingUpperCase, registrationPage.ReturnInvalidRegistrationErrorMessage());
         }
 
         [Then(@"I should see a password validation error for missing special character")]
         public void ThenIShouldSeeAPasswordValidationErrorForMissingSpecialCharacter()
         {
             Assert.AreEqual(true, registrationPage.VerifyInvalidRegistrationErrorIsDisplayed());
-            Assert.AreEqual(ErrorMessages.InvalidPasswordMissingSymbol, registrationPage.ReturnInvalidRegistrationErrorMessage());
+            Assert.AreEqual(Resources.InvalidPasswordMissingSymbol, registrationPage.ReturnInvalidRegistrationErrorMessage());
         }
 
         [Then(@"I should see a password validation error for missing lowercase")]
         public void ThenIShouldSeeAPasswordValidationErrorForMissingLowercase()
         {
             Assert.AreEqual(true, registrationPage.VerifyInvalidRegistrationErrorIsDisplayed());
-            Assert.AreEqual(ErrorMessages.InvalidPasswordMissingLowerCase, registrationPage.ReturnInvalidRegistrationErrorMessage());
+            Assert.AreEqual(Resources.InvalidPasswordMissingLowerCase, registrationPage.ReturnInvalidRegistrationErrorMessage());
         }
 
         [Then(@"I should see a password validation error for incorrect length")]
         public void ThenIShouldSeeAPasswordValidationErrorForIncorrectLength()
         {
             Assert.AreEqual(true, registrationPage.VerifyInvalidRegistrationErrorIsDisplayed());
-            Assert.AreEqual(ErrorMessages.InvalidPasswordlength, registrationPage.ReturnInvalidRegistrationErrorMessage());
+            Assert.AreEqual(Resources.InvalidPasswordlength, registrationPage.ReturnInvalidRegistrationErrorMessage());
         }
 
         [Then(@"I should see an error message for duplicate username")]
         public void ThenIShouldSeeAnErrorMessageForDuplicateUsername()
         {
             Assert.AreEqual(true, registrationPage.VerifyInvalidRegistrationErrorIsDisplayed());
-            Assert.AreEqual(ErrorMessages.UserAlreadyExists, registrationPage.ReturnInvalidRegistrationErrorMessage());
-
+            Assert.AreEqual(Resources.UserAlreadyExists, registrationPage.ReturnInvalidRegistrationErrorMessage());
         }
 
 

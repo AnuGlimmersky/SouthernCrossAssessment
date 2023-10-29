@@ -5,7 +5,7 @@ So that I can vote for a sport car
 
 Scenario: User successfully registers with valid details
 	Given that I am in the Buggy Cars registration page
-	When I have filled username as 'JaneDoe5565', First name as 'Jane' and Last name as 'Doe'
+	When I have filled username as 'JohnDoe', First name as 'John' and Last name as 'Doe'
 	And I enter password and confirm password as 'testUserPw1.'
 	And I click Register button
 	Then I should see a registration successful message
@@ -44,6 +44,7 @@ Scenario: Password validation for password with incorrect character length
 	And I enter password and confirm password as 'Test'
 	And I click Register button
 	Then I should see a password validation error for incorrect length
+
 
 
 

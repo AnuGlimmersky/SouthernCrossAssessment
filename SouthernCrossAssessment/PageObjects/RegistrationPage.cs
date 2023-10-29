@@ -1,18 +1,18 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SouthernCrossAssessment.Support;
+using SouthernCrossAssessment.Helper;
 
 namespace SouthernCrossAssessment.PageObjects
 {
     public class RegistrationPage
     {
         private IWebDriver driver;
-        Utilities utilities;
+        UtilityHelper utilities;
 
         public RegistrationPage(IWebDriver driver)
         {
             this.driver = driver;
-            utilities = new Utilities(driver);
+            utilities = new UtilityHelper(driver);
         }
 
         By UsernameField = By.Id("username");
